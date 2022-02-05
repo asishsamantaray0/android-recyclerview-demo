@@ -12,18 +12,17 @@ import com.asish.companyinfo.models.CompanyModel;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * MainActivity is the First screen of our App.
+ */
 public class MainActivity extends AppCompatActivity {
-
-    private ActivityMainBinding binding;
-    private RecyclerView recyclerView;
-    private CompanyAdapter companyAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        recyclerView = binding.recyclerView;
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        RecyclerView recyclerView = binding.recyclerView;
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             new CompanyModel("whatsapp", "Mark", R.drawable.whatsapp),
             new CompanyModel("yelp", "Mark", R.drawable.yelp));
 
-        companyAdapter = new CompanyAdapter(companies);
+        CompanyAdapter companyAdapter = new CompanyAdapter(companies);
 
         recyclerView.setAdapter(companyAdapter);
 

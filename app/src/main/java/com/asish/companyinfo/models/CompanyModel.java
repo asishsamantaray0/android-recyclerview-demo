@@ -1,5 +1,8 @@
 package com.asish.companyinfo.models;
 
+/**
+ * Company Model class.
+ */
 public class CompanyModel {
 
     private String name;
@@ -9,6 +12,13 @@ public class CompanyModel {
     public CompanyModel() {
     }
 
+    /**
+     * All Args Constructor.
+     *
+     * @param name    Name of the Company
+     * @param ceoName CEO name
+     * @param logo    Company Logo
+     */
     public CompanyModel(String name, String ceoName, int logo) {
         this.name = name;
         this.ceoName = ceoName;
